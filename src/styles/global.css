@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+.pattern-background {
+  width: 100%;
+  height: 100%;
+  background-color: #151822;
+  background-image: linear-gradient(32deg, rgba(8, 8, 8, 0.74) 30px, transparent),
+    linear-gradient(45deg, #030819 0%, #211936 75%, #570131 100%);
+  background-size: 60px 60px, 100% 100%;
+  background-position: -5px -5px, 0 0;
+}
