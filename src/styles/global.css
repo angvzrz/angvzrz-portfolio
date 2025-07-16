@@ -39,9 +39,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-deep-blue: var(--deep-blue)
-  --color-plum-dark: var(--plum-dark)
-  --color-crimson-shadow: var(--crimson-shadow)
+  --color-deep-blue: var(--deep-blue);
+  --color-plum-dark: var(--plum-dark);
+  --color-crimson-shadow: var(--crimson-shadow);
 }
 
 :root {
@@ -131,20 +131,23 @@
       background-color: #030819;
 
       background-image:
-    /* Bottom fade into background color */ linear-gradient(
-          to bottom,
-          rgba(21, 24, 34, 0) 0%,
-          #030819 100%
-        ),
+    /* Bottom fade into background color */
+        linear-gradient(to bottom, rgba(21, 24, 34, 0) 0%, #030819 100%),
         /* Pattern darkening layer */
           linear-gradient(32deg, rgba(8, 8, 8, 0.74) 30px, transparent),
         /* Diagonal color gradient */
           linear-gradient(45deg, #050c26 0%, #211936 75%, #570131 100%);
 
-      background-size: 100% 100%, /* Bottom fade layer */ 60px 60px,
+      background-size:
+        100% 100%,
+        /* Bottom fade layer */ 60px 60px,
         /* Pattern darkening */ 100% 100%;
 
-      background-position: 0 0, -5px -5px, 0 0, 0 0;
+      background-position:
+        0 0,
+        -5px -5px,
+        0 0,
+        0 0;
     }
   }
 }
