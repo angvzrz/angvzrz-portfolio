@@ -1,0 +1,62 @@
+---
+import { Badge } from '@/components/ui/badge';
+import { RocketIcon } from 'lucide-react';
+
+interface Props {
+  company: string;
+  companySite?: string;
+  role: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
+
+const {
+  company,
+  companySite,
+  role,
+  period,
+  description,
+  technologies = [],
+} = Astro.props;
+---
+
+<li
+  class="max-w-sm rounded-2xl from-transparent via-deep-blue via-50% to-crimson-shadow/40 text-slate-400 hover:bg-radial lg:max-w-2xl"
+>
+  <a
+    href={companySite}
+    aria-disabled={companySite ? false : true}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group transition-colors duration-300 ease-out"
+  >
+    <article
+      class="flex flex-col justify-start gap-4 p-6 lg:justify-between xl:flex-row"
+    >
+      <header class="text-slate-500">{period}</header>
+      <div class="flex flex-col gap-2 md:max-w-sm">
+        <h3
+          class="flex gap-2 text-slate-300 group-hover:bg-gradient-to-b group-hover:from-amber-700 group-hover:to-amber-400 group-hover:bg-clip-text group-hover:text-transparent"
+        >
+          <span class="font-bold">
+            {company} | {role}
+          </span>
+          <RocketIcon
+            className="group-hover:stroke size-4 self-end transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-amber-400"
+          />
+        </h3>
+        <p class="text-left">{description}</p>
+        <ul class="flex flex-wrap gap-2">
+          {
+            technologies.map((tech) => (
+              <li>
+                <Badge className="bg-blue-500">{tech}</Badge>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </a>
+</li>
