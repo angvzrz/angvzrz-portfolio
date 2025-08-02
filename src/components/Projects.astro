@@ -1,6 +1,9 @@
 ---
 import { ArrowRightIcon } from 'lucide-react';
 import { Card, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Image } from 'astro:assets';
+import cardTopBackgroundImage from '../assets/card-image.png';
+import myLogo from '../assets/my-logo.svg';
 
 const projects = [
   {
@@ -38,15 +41,19 @@ const projects = [
       projects.map((project) => (
         <Card className="bg-[#0A0F1F] border-0 pt-0 group">
           <a href={project.url} target="_blank " rel="noopener noreferrer">
-            <div
-              class="flex h-32 w-full items-center justify-center rounded-t-xl bg-cover md:h-44"
-              style={{ backgroundImage: 'url(/src/assets/card-image.png)' }}
-            >
-              <img
-                src="/src/assets/my-logo.svg"
-                alt="logo"
-                class="size-80 fill-white stroke-white drop-shadow-[0_2px_4px_rgba(255,255,255,0.4)]"
+            <div class="relative">
+              <Image
+                src={cardTopBackgroundImage}
+                alt="card background image"
+                class="h-40 w-full rounded-t-xl object-cover md:h-44"
               />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <Image
+                  src={myLogo}
+                  alt="logo"
+                  class="size-52 fill-white drop-shadow-[0_2px_4px_rgba(255,255,255,0.4)] sm:size-72 md:size-80"
+                />
+              </div>
             </div>
             <CardHeader className="pt-4 text-slate-300">
               <CardTitle className="text-xl font-semibold line-clamp-2">
