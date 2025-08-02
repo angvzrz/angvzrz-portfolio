@@ -1,0 +1,65 @@
+---
+import { ArrowRightIcon } from 'lucide-react';
+import { Card, CardDescription, CardHeader, CardTitle } from './ui/card';
+
+const projects = [
+  {
+    name: 'Summary AI',
+    url: 'https://mainpoint-ai.vercel.app/',
+    description:
+      'AI tool for summarizing pdf documents in a social media story format.',
+  },
+  {
+    name: 'Drive Clone',
+    url: 'https://drive-clone-one-nu.vercel.app/',
+    description: 'Online storage service for your files.',
+  },
+  {
+    name: 'Destination Weather',
+    url: 'https://destination-weather.vercel.app/',
+    description: 'Check how the weather is in the place you want.',
+  },
+  {
+    name: 'Blog App',
+    url: 'https://blog-app-sigma-blond.vercel.app/',
+    description: 'Simple tool for writing blog posts.',
+  },
+];
+---
+
+<section class="p-12 text-slate-300 md:p-24">
+  <h2 class="mb-8 text-center text-4xl font-bold md:mb-6 xl:mb-16">
+    Noticeable Projects
+  </h2>
+  <div
+    class="mb-2 grid grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      projects.map((project) => (
+        <Card className="bg-[#0A0F1F] border-0 pt-0 group">
+          <a href={project.url} target="_blank " rel="noopener noreferrer">
+            <div
+              class="flex h-32 w-full items-center justify-center rounded-t-xl bg-cover md:h-44"
+              style={{ backgroundImage: 'url(/src/assets/card-image.png)' }}
+            >
+              <img
+                src="/src/assets/my-logo.svg"
+                alt="logo"
+                class="size-80 fill-white stroke-white drop-shadow-[0_2px_4px_rgba(255,255,255,0.4)]"
+              />
+            </div>
+            <CardHeader className="pt-4 text-slate-300">
+              <CardTitle className="text-xl font-semibold line-clamp-2">
+                {project.name}
+              </CardTitle>
+              <CardDescription className="line-clamp-3 text-slate-300 flex items-center justify-between">
+                {project.description}
+                <ArrowRightIcon className="size-6 md:size-8 -translate-x-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all" />
+              </CardDescription>
+            </CardHeader>
+          </a>
+        </Card>
+      ))
+    }
+  </div>
+</section>
