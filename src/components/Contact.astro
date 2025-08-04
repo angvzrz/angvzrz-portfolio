@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import footerBackground from '@/assets/background.svg';
+---
+
+<footer class="relative bg-crimson-shadow/50 text-center text-slate-300">
+  <Image
+    src={footerBackground}
+    alt="card background image"
+    class="absolute inset-0 size-full object-cover"
+  />
+  <div class="p-5">
+    <h2 class="mb-8 text-4xl font-bold md:mb-6 xl:mb-10">Let's Connect</h2>
+    <h3 class="scroll-m-20 text-xl tracking-tight hover:underline">
+      <a href="mailto:ang_vzrz@live.com.mx">ang_vzrz@live.com.mx</a>
+    </h3>
+  </div>
+</footer>
