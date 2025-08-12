@@ -3,7 +3,10 @@ import { Image } from 'astro:assets';
 import footerBackground from '@/assets/background.svg';
 ---
 
-<footer class="relative bg-crimson-shadow/50 text-center text-slate-300">
+<footer
+  id="contact"
+  class="relative my-12 bg-crimson-shadow/50 text-center text-slate-300 md:my-24"
+>
   <Image
     src={footerBackground}
     alt="card background image"
