@@ -8,7 +8,10 @@ import NavBar from '@/components/common/NavBar.astro';
 ---
 
 <Layout>
-  <NavBar />
+  <header class="fixed top-0 z-10 size-fit h-20 w-full">
+    <div class="bg-dot-grid absolute inset-0 z-8"></div>
+    <NavBar />
+  </header>
   <Welcome />
   <Work />
   <Projects />
