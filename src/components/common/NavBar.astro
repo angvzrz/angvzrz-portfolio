@@ -9,20 +9,21 @@ import InstagramIcon from '../../assets/instagram.svg';
 <nav
   class="fixed top-0 z-10 flex h-20 w-full items-center justify-between bg-slate-900/10 p-4 md:p-10"
 >
-  <a
-    href="/"
-    class="relative hidden size-full h-20 items-center gap-6 text-white md:flex"
-  >
-    <Image
-      src={myLogo}
-      alt="logo"
-      class="absolute top-1/2 left-0 size-28 -translate-x-1/2 -translate-y-1/2 lg:size-32"
-    />
-
-    <h2 class="ml-8 text-2xl font-semibold tracking-tight lg:text-4xl">
-      Angel Valdez
-    </h2>
-  </a>
+  <div class="w-full">
+    <a
+      href="#"
+      class="relative hidden h-20 w-fit items-center gap-6 text-white md:flex"
+    >
+      <Image
+        src={myLogo}
+        alt="logo"
+        class="absolute top-1/2 left-0 size-28 -translate-x-1/2 -translate-y-1/2 lg:size-32"
+      />
+      <h2 class="ml-8 text-2xl font-semibold tracking-tight lg:text-4xl">
+        Angel Valdez
+      </h2>
+    </a>
+  </div>
 
   <ul
     class="flex size-full items-center justify-end gap-8 text-emerald-600 lg:gap-16 [&>li:hover]:text-green-400 [&>li>a]:transition-colors [&>li>a]:duration-300 [&>li>a]:ease-out"
